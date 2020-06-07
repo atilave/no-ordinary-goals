@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - no ordinary #goals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</li>
+                <li><a href="about.html">About</li>
+                <li><a href="contact.html">Contact</li>
+                <a class="cta" href="SDG.html"><button>Learn More</button></a>
+            </ul>
+        </nav>
+    </header>
+
+<div class="contact__main">
+    <br>
+    <br>
+<div class="contact__form">
+    <h4>Leave a Message ✉️</h4> <hr>
+    <form action="https://formspree.io/xbjzodbg" method="POST">
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" name="Name" id="inputName" placeholder="Jane Doe" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">E-mail</label> 
+            <input type="Email" name="Email" id="inputEmail" placeholder="JaneDoe@Email.com" class="form-control"></label>
+        </div>
+        <div class="form-group">
+            <label for="inputMessage">Your Message</label>
+            <textarea class="form-control" input type="text" name="message" id="inputMessage" rows="3" placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit">Send Your Message</button></a>
+    </form>
+</div>
+</div>
+
+<div class="contact__testimony">
+    <h4>Testimonies</h4>
+    <div class="row">
+
+    </div>
+</div>
+
+<div class="fixed__wheel">
+    <img src="images/fixed.png" width="100%" onclick="hello()">
+  </div>
+
+
+    <footer>
+        👋 Web Design made by <a href="http://twitter.com/evalita">Eva</a> as a final project for <a
+        href="https://hacktiv8.com/">Hacktiv8</a>. Sustainable Development Goals Resources are from <a
+        href="https://www.globalgoals.org/">The Global Goals.</a>
+    </footer>
+
+</body>
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script>
+    var pemberiTestimoni = [{
+        nama: "John Doe",
+        background: "Student",
+        jenisKelamin: "Male",
+        photo: "/Eva_Final\ Project/images/Testimoni2.png",
+        hobi: ["watching TV", "hiking"],
+        testimoni: '"Situsnya Informatif! Sangat membantu saya untuk belajar!"',
+    }, {
+        nama: "Jane Doe",
+        background: "Designer",
+        jenisKelamin: "Female",
+        photo: "/Eva_Final\ Project/images/Testimoni1.png",
+        hobi: ["soccer", "music"],
+        testimoni: '"Saya bisa belajar banyak tentang SDG!"',
+    }];
+
+    pemberiTestimoni.forEach(function (pemberi) {
+        $('.row').append('<div class="card col-6"><br><center><img width="100" src="'
+            + pemberi.photo + '"/> <div> '
+            + pemberi.testimoni + ' </div> <div> - '
+            + pemberi.nama + '</div><br></div>');
+    });
+</script>
+
+</body>
+
+</html>
